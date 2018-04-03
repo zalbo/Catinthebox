@@ -2,19 +2,205 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  background: black;
+}
+
 #img_center
 {
-   width:30%;
-   margin-left: 35%;
-   margin-right: 35%;
+   width:60%;
+   margin-left: 20%;
+   margin-right: 20%;
 }
 
 
-.point_rotate_blu {
+.point{
     position: absolute;
-    /* height: 100%; */
-    background: blue;
-    width: 2.7%;
     top: 0%;
     bottom: 0%;
+}
+
+.less90{
+  left: 0%;
+  width: 2.7%;
+}
+
+.less85{
+  left: 2.7%;
+  width: 2.7%;
+}
+
+.less80{
+  left: 5.4%;
+  width: 2.7%;
+}
+
+.less75{
+  left: 8.1%;
+  width: 2.7%;
+}
+
+.less70{
+  left: 10.8%;
+  width: 2.7%;
+}
+
+.less65{
+  left: 13.5%;
+  width: 2.7%;
+}
+
+.less60{
+  left: 16.2%;
+  width: 2.7%;
+}
+
+.less55{
+  left: 18.9%;
+  width: 2.7%;
+}
+
+.less50{
+  left: 21.6%;
+  width: 2.7%;
+}
+
+.less45{
+  left: 24.3%;
+  width: 2.7%;
+}
+
+.less40{
+  left: 27%;
+  width: 2.7%;
+}
+
+.less35{
+  left: 29.7%;
+  width: 2.7%;
+}
+
+.less30{
+  left: 32.4%;
+  width: 2.7%;
+}
+
+.less25{
+  left: 35.1%;
+  width: 2.7%;
+}
+
+.less20{
+  left: 37.8%;
+  width: 2.7%;
+}
+
+.less15{
+  left: 40.5%;
+  width: 2.7%;
+}
+
+.less10{
+  left: 43.2%;
+  width: 2.7%;
+}
+
+.less5{
+  left: 45.9%;
+  width: 2.7%;
+}
+
+.middle{
+  left: 48.6%;
+  width: 2.7%;
+}
+
+.plus90{
+  right: 0%;
+  width: 2.7%;
+}
+
+.plus85{
+  right: 2.7%;
+  width: 2.7%;
+}
+
+.plus80{
+  right: 5.4%;
+  width: 2.7%;
+}
+
+.plus75{
+  right: 8.1%;
+  width: 2.7%;
+}
+
+.plus70{
+  right: 10.8%;
+  width: 2.7%;
+}
+
+.plus65{
+  right: 13.5%;
+  width: 2.7%;
+}
+
+.plus60{
+  right: 16.2%;
+  width: 2.7%;
+}
+
+.plus55{
+  right: 18.9%;
+  width: 2.7%;
+}
+
+.plus50{
+  right: 21.6%;
+  width: 2.7%;
+}
+
+.plus45{
+  right: 24.3%;
+  width: 2.7%;
+}
+
+.plus40{
+  right: 27%;
+  width: 2.7%;
+}
+
+.plus35{
+  right: 29.7%;
+  width: 2.7%;
+}
+
+.plus30{
+  right: 32.4%;
+  width: 2.7%;
+}
+
+.plus25{
+  right: 35.1%;
+  width: 2.7%;
+}
+
+.plus20{
+  right: 37.8%;
+  width: 2.7%;
+}
+
+.plus15{
+  right: 40.5%;
+  width: 2.7%;
+}
+
+.plus10{
+  right: 43.2%;
+  width: 2.7%;
+}
+
+.plus5{
+  right: 45.9%;
+  width: 2.7%;
 }
