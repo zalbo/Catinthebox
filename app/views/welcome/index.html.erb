@@ -1,3 +1,5 @@
+<img id="logo" src="/images/logo.png" alt="edit" />
+
 <div class="point less90" onmouseover="bigImg(-90)"></div>
 <div class="point less85" onmouseover="bigImg(-85)"></div>
 <div class="point less80" onmouseover="bigImg(-80)"></div>
@@ -15,7 +17,7 @@
 <div class="point less20" onmouseover="bigImg(-20)"></div>
 <div class="point less15" onmouseover="bigImg(-15)"></div>
 <div class="point less10" onmouseover="bigImg(-10)"></div>
-<div class="point less5" onmouseover="bigImg(-5)"></div>
+<div class="point less5" onmouseover="bigImg(5)"></div>
 <div class="point middle" onmouseover="bigImg(0)"></div>
 <div class="point plus5" onmouseover="bigImg(5)"></div>
 <div class="point plus10" onmouseover="bigImg(10)"></div>
@@ -36,21 +38,88 @@
 <div class="point plus85" onmouseover="bigImg(85)"></div>
 <div class="point plus90" onmouseover="bigImg(90)"></div>
 
+<img id="img_center" src="/images/0.png" alt="edit" />
+<img id="cat" src="/images/cat0.png" alt="edit" />
 
-
-
-
-
-
-
-
-
-<img id="img_center" src="/images/0.jpg" alt="edit" />
+<img class="button_yes" src="/images/yes_up.png" alt="yes" onclick="answer('yes')">
+<img class="button_no" src="/images/no_up.png" alt="no" onclick="answer('no')">
 
   <script>
+
+  position = 0 ;
+  in_animation = false;
+  frame_open_box = 1;
+  frame_cat_box = 1;
+  generate_cat();
+
+
   function bigImg(x) {
-    document.getElementById("img_center").src = "/images/" + x + ".jpg";
+    if (in_animation) {
+
+    } else {
+      document.getElementById("img_center").src = "/images/" + x + ".png";
+      position = x;
+    }
+
   }
+
+
+  function answer(x) {
+    in_animation = true;
+    animation_reset_orientation = setInterval(function(){
+      animation(position);
+  }, 50);
+  }
+
+  function animation(){
+    document.getElementsByClassName("example");
+    if (position > 0 ){
+      position = position - 5;
+      document.getElementById("img_center").src = "/images/" + position + ".png";
+    } else if (position < 0){
+      position = position + 5;
+      document.getElementById("img_center").src = "/images/" + position + ".png";
+    } else {
+      clearInterval(animation_reset_orientation); //stop reset orientation
+      animation_open_box = setInterval(function(){
+        open_box();
+    }, 50);
+    }
+
+  }
+
+
+
+  function open_box(){
+    if (frame_open_box < 16){
+      document.getElementById("img_center").src = "/images/open" + frame_open_box + ".png";
+      frame_open_box++;
+    }
+    if (is_the_cat_in_the_box){
+      animatino_cat = setInterval(function(){
+        exit_cat();
+      }, 500);
+    }
+  }
+
+  function exit_cat(){
+    if (frame_cat_box < 16){
+      document.getElementById("cat").style.display = "initial";
+      document.getElementById("cat").src = "/images/cat" + frame_cat_box + ".png";
+      frame_cat_box++;
+    }
+  }
+
+  function generate_cat(){
+    array_boolean = [true, false];
+    is_the_cat_in_the_box = array_boolean[Math.floor(Math.random() * array_boolean.length)];
+  }
+
+
+
+
+
+
 
 
   </script>
